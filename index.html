@@ -1,14 +1,9 @@
-<!DOCTYPE html>
-<html lang="fr">
+<!DOCTYPE html><html lang="fr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TontiGo</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-<style>
+<title>TontiGo</title><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"><style>
 *{
     margin:0;
     padding:0;
@@ -248,165 +243,146 @@ button{
         font-size:14px;
     }
 }
-</style>
-</head>
+</style></head><body><!-- PAGE ACCUEIL --><section id="home-page"><header class="home-header">
 
-<body>
-
-<!-- PAGE ACCUEIL -->
-
-<section id="home-page">
-
-    <header class="home-header">
-
-        <button class="header-btn login-btn" onclick="openRegister()">
-            <i class="fas fa-sign-in-alt"></i>
-            Se connecter
-        </button>
-
-        <button class="header-btn register-btn" onclick="openRegister()">
-            <i class="fas fa-user-plus"></i>
-            S'inscrire
-        </button>
-
-    </header>
-
-    <main class="home-content">
-
-        <div class="home-logo">
-            <i class="fas fa-users"></i>
-        </div>
-
-        <h1>TontiGo</h1>
-
-        <p class="tagline">
-            La solidarité financière, réinventée et sécurisée.
-        </p>
-
-        <div class="presentation">
-
-            <h2>🔥 QU'EST-CE QUE TontiGo ?</h2>
-
-            <p>
-                TontiGo est une plateforme digitale de
-                contribution communautaire fonctionnant
-                sur un système P2P (Peer-to-Peer),
-                c'est-à-dire de membre à membre.
-            </p>
-
-            <p>
-                Le principe est simple : des membres
-                contribuent entre eux à travers un
-                système automatisé de jumelage afin
-                de faire circuler l'argent rapidement
-                dans la communauté.
-            </p>
-
-            <div class="more-text" id="moreText">
-
-                <p>
-                    TontiGo a pour objectif de faciliter
-                    les échanges entre les membres et
-                    de favoriser la solidarité communautaire.
-                </p>
-
-                <p>
-                    Chaque membre doit prendre connaissance
-                    des conditions de fonctionnement,
-                    des règles et des éventuels risques
-                    avant de participer.
-                </p>
-
-                <p>
-                    La participation ne garantit aucun
-                    rendement ni remboursement.
-                </p>
-
-            </div>
-
-            <button class="read-btn" onclick="togglePresentation()" id="readButton">
-                Lire toute la présentation
-                <i class="fas fa-chevron-down"></i>
-            </button>
-
-        </div>
-
-    </main>
-
-</section>
-
-
-<!-- PAGE INSCRIPTION -->
-
-<section id="register-page">
-
-    <button class="back-btn" onclick="goHome()">
-        <i class="fas fa-arrow-left"></i>
-        Retour à l'accueil
+    <button class="header-btn login-btn" onclick="openRegister()">
+        <i class="fas fa-sign-in-alt"></i>
+        Se connecter
     </button>
 
-    <div class="auth-container">
+    <button class="header-btn register-btn" onclick="openRegister()">
+        <i class="fas fa-user-plus"></i>
+        S'inscrire
+    </button>
 
-        <div class="auth-card">
+</header>
 
-            <div class="logo">
+<main class="home-content">
 
-                <i class="fas fa-users"></i>
+    <div class="home-logo">
+        <i class="fas fa-users"></i>
+    </div>
 
-                <h1>TontiGo</h1>
+    <h1>TontiGo</h1>
 
-                <p>La tontine digitale réinventée</p>
+    <p class="tagline">
+        La solidarité financière, réinventée et sécurisée.
+    </p>
 
-            </div>
+    <div class="presentation">
 
-            <form id="register-form">
+        <h2>🔥 QU'EST-CE QUE TontiGo ?</h2>
 
-                <div class="input-group">
+        <p>
+            TontiGo est une plateforme digitale de
+            contribution communautaire fonctionnant
+            sur un système P2P (Peer-to-Peer),
+            c'est-à-dire de membre à membre.
+        </p>
 
-                    <label for="username">
-                        Nom d'utilisateur
-                    </label>
+        <p>
+            Le principe est simple : des membres
+            contribuent entre eux à travers un
+            système automatisé de jumelage afin
+            de faire circuler l'argent rapidement
+            dans la communauté.
+        </p>
 
-                    <input
-                        type="text"
-                        id="username"
-                        placeholder="Nom d'utilisateur"
-                        required
-                    >
+        <div class="more-text" id="moreText">
 
-                </div>
+            <p>
+                TontiGo a pour objectif de faciliter
+                les échanges entre les membres et
+                de favoriser la solidarité communautaire.
+            </p>
 
-                <div class="input-group">
+            <p>
+                Chaque membre doit prendre connaissance
+                des conditions de fonctionnement,
+                des règles et des éventuels risques
+                avant de participer.
+            </p>
 
-                    <label for="code">
-                        Code
-                    </label>
-
-                    <input
-                        type="text"
-                        id="code"
-                        placeholder="Entrez votre code"
-                        required
-                    >
-
-                </div>
-
-                <button type="submit" class="btn-submit" id="submit-button">
-                    S'inscrire
-                </button>
-
-                <div id="firebase-message"></div>
-
-            </form>
+            <p>
+                La participation ne garantit aucun
+                rendement ni remboursement.
+            </p>
 
         </div>
+
+        <button class="read-btn" onclick="togglePresentation()" id="readButton">
+            Lire toute la présentation
+            <i class="fas fa-chevron-down"></i>
+        </button>
 
     </div>
 
-</section>
+</main>
 
+</section><!-- PAGE INSCRIPTION --><section id="register-page"><button class="back-btn" onclick="goHome()">
+    <i class="fas fa-arrow-left"></i>
+    Retour à l'accueil
+</button>
 
-<script type="module">
+<div class="auth-container">
+
+    <div class="auth-card">
+
+        <div class="logo">
+
+            <i class="fas fa-users"></i>
+
+            <h1>TontiGo</h1>
+
+            <p>La tontine digitale réinventée</p>
+
+        </div>
+
+        <form id="register-form">
+
+            <div class="input-group">
+
+                <label for="username">
+                    Nom d'utilisateur
+                </label>
+
+                <input
+                    type="text"
+                    id="username"
+                    placeholder="Nom d'utilisateur"
+                    required
+                >
+
+            </div>
+
+            <div class="input-group">
+
+                <label for="code">
+                    Code
+                </label>
+
+                <input
+                    type="text"
+                    id="code"
+                    placeholder="Entrez votre code"
+                    required
+                >
+
+            </div>
+
+            <button type="submit" class="btn-submit" id="submit-button">
+                S'inscrire
+            </button>
+
+            <div id="firebase-message"></div>
+
+        </form>
+
+    </div>
+
+</div>
+
+</section><script type="module">
 
 import {
     initializeApp
@@ -540,7 +516,7 @@ form.addEventListener("submit", async (event)=>{
 
             username: username,
 
-            invitationCode: code,
+            code: code,
 
             createdAt: Date.now(),
 
@@ -552,8 +528,6 @@ form.addEventListener("submit", async (event)=>{
 
         message.textContent =
         "Inscription réussie ! Redirection vers TontiGo...";
-
-        /* REDIRECTION VERS LE SITE OFFICIEL */
 
         setTimeout(()=>{
 
@@ -580,7 +554,5 @@ form.addEventListener("submit", async (event)=>{
 
 });
 
-</script>
-
-</body>
+</script></body>
 </html>
