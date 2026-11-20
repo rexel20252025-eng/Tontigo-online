@@ -5,167 +5,412 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>TontiGo</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-body {
-    background: #131b26;
-    color: white;
-    font-family: 'Inter', sans-serif;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
+body{
+    background:#131b26;
+    color:white;
+    font-family:'Inter',sans-serif;
+    min-height:100vh;
 }
 
-.auth-container {
-    width: 100%;
-    max-width: 400px;
+button{
+    font-family:inherit;
+    cursor:pointer;
 }
 
-.auth-card {
-    background: #1b2432;
-    border: 1px solid #283344;
-    border-radius: 16px;
-    padding: 30px 25px;
+/* ACCUEIL */
+
+.home-header{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    padding:25px 12px;
+    background:#131b26;
+    border-bottom:1px solid #283344;
 }
 
-.logo {
-    text-align: center;
-    margin-bottom: 30px;
+.header-btn{
+    border:none;
+    border-radius:18px;
+    padding:16px 20px;
+    font-size:16px;
+    font-weight:700;
+    flex:1;
+    max-width:190px;
 }
 
-.logo i {
-    font-size: 42px;
-    color: #10b981;
-    margin-bottom: 12px;
+.login-btn{
+    background:#10b981;
+    color:white;
+    box-shadow:0 5px 20px #10b98140;
 }
 
-.logo h1 {
-    font-size: 27px;
-    font-weight: 700;
+.register-btn{
+    background:#f5f5f5;
+    color:#111;
 }
 
-.logo p {
-    color: #9ca3af;
-    font-size: 13px;
-    margin-top: 8px;
+.home-content{
+    max-width:650px;
+    margin:auto;
+    padding:45px 20px 60px;
+    text-align:center;
 }
 
-.input-group {
-    margin-bottom: 20px;
+.home-logo{
+    color:#10b981;
+    font-size:75px;
+    margin-bottom:25px;
+    text-shadow:0 0 25px #10b98160;
 }
 
-.input-group label {
-    display: block;
-    font-size: 13px;
-    margin-bottom: 9px;
-    color: #d1d5db;
+.home-content h1{
+    font-size:55px;
+    font-weight:800;
+    margin-bottom:12px;
 }
 
-.input-group input {
-    width: 100%;
-    padding: 14px;
-    background: #131b26;
-    border: 1px solid #283344;
-    border-radius: 9px;
-    color: white;
-    font-size: 14px;
-    outline: none;
+.tagline{
+    font-size:22px;
+    line-height:1.5;
+    margin-bottom:55px;
 }
 
-.input-group input:focus {
-    border-color: #10b981;
+.presentation{
+    background:#1b2636;
+    border:1px solid #344052;
+    border-radius:22px;
+    padding:25px 23px;
+    text-align:left;
+    box-shadow:0 10px 30px #0002;
 }
 
-.btn-submit {
-    width: 100%;
-    padding: 14px;
-    background: #10b981;
-    border: none;
-    border-radius: 9px;
-    color: white;
-    font-size: 15px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.3s;
+.presentation h2{
+    font-size:21px;
+    margin-bottom:35px;
 }
 
-.btn-submit:hover {
-    background: #059669;
+.presentation p{
+    color:#cbd0da;
+    font-size:17px;
+    line-height:1.9;
+    margin-bottom:25px;
 }
 
-.btn-submit:disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
+.more-text{
+    display:none;
 }
 
-#firebase-message {
-    text-align: center;
-    font-size: 13px;
-    margin-top: 15px;
-    line-height: 1.5;
+.more-text.show{
+    display:block;
+}
+
+.read-btn{
+    display:block;
+    width:90%;
+    margin:35px auto 0;
+    padding:18px 10px;
+    border:none;
+    border-radius:18px;
+    background:#f5f5f5;
+    color:#111;
+    font-size:17px;
+    font-weight:600;
+}
+
+/* FORMULAIRE */
+
+#register-page{
+    display:none;
+    min-height:100vh;
+    padding:25px 18px;
+}
+
+.back-btn{
+    background:transparent;
+    border:1px solid #344052;
+    color:white;
+    padding:12px 18px;
+    border-radius:10px;
+    font-size:14px;
+    margin-bottom:30px;
+}
+
+.auth-container{
+    width:100%;
+    max-width:400px;
+    margin:30px auto;
+}
+
+.auth-card{
+    background:#1b2432;
+    border:1px solid #283344;
+    border-radius:16px;
+    padding:30px 25px;
+}
+
+.logo{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.logo i{
+    font-size:42px;
+    color:#10b981;
+    margin-bottom:12px;
+}
+
+.logo h1{
+    font-size:27px;
+    font-weight:700;
+}
+
+.logo p{
+    color:#9ca3af;
+    font-size:13px;
+    margin-top:8px;
+}
+
+.input-group{
+    margin-bottom:20px;
+}
+
+.input-group label{
+    display:block;
+    font-size:13px;
+    margin-bottom:9px;
+    color:#d1d5db;
+}
+
+.input-group input{
+    width:100%;
+    padding:14px;
+    background:#131b26;
+    border:1px solid #283344;
+    border-radius:9px;
+    color:white;
+    font-size:14px;
+    outline:none;
+}
+
+.input-group input:focus{
+    border-color:#10b981;
+}
+
+.btn-submit{
+    width:100%;
+    padding:14px;
+    background:#10b981;
+    border:none;
+    border-radius:9px;
+    color:white;
+    font-size:15px;
+    font-weight:600;
+}
+
+.btn-submit:disabled{
+    opacity:.6;
+    cursor:not-allowed;
+}
+
+#firebase-message{
+    text-align:center;
+    font-size:13px;
+    margin-top:15px;
+    line-height:1.5;
+}
+
+@media(max-width:380px){
+
+    .home-content h1{
+        font-size:43px;
+    }
+
+    .tagline{
+        font-size:19px;
+    }
+
+    .presentation{
+        padding:20px 17px;
+    }
+
+    .header-btn{
+        padding:14px 10px;
+        font-size:14px;
+    }
 }
 </style>
 </head>
 
 <body>
 
-<div class="auth-container">
+<!-- PAGE ACCUEIL -->
 
-    <div class="auth-card">
+<section id="home-page">
 
-        <div class="logo">
+    <header class="home-header">
+
+        <button class="header-btn login-btn" onclick="openRegister()">
+            <i class="fas fa-sign-in-alt"></i>
+            Se connecter
+        </button>
+
+        <button class="header-btn register-btn" onclick="openRegister()">
+            <i class="fas fa-user-plus"></i>
+            S'inscrire
+        </button>
+
+    </header>
+
+    <main class="home-content">
+
+        <div class="home-logo">
             <i class="fas fa-users"></i>
-            <h1>TontiGo</h1>
-            <p>Veuillez rejoindre le groupe de réunion</p>
         </div>
 
-        <form id="register-form">
+        <h1>TontiGo</h1>
 
-            <div class="input-group">
-                <label for="username">Nom d'utilisateur</label>
-                <input
-                    type="text"
-                    id="username"
-                    placeholder="Non d'utilisateur"
-                    required
-                >
+        <p class="tagline">
+            La solidarité financière, réinventée et sécurisée.
+        </p>
+
+        <div class="presentation">
+
+            <h2>🔥 QU'EST-CE QUE TontiGo ?</h2>
+
+            <p>
+                TontiGo est une plateforme digitale de
+                contribution communautaire fonctionnant
+                sur un système P2P (Peer-to-Peer),
+                c'est-à-dire de membre à membre.
+            </p>
+
+            <p>
+                Le principe est simple : des membres
+                contribuent entre eux à travers un
+                système automatisé de jumelage afin
+                de faire circuler l'argent rapidement
+                dans la communauté.
+            </p>
+
+            <div class="more-text" id="moreText">
+
+                <p>
+                    TontiGo a pour objectif de faciliter
+                    les échanges entre les membres et
+                    de favoriser la solidarité communautaire.
+                </p>
+
+                <p>
+                    Chaque membre doit prendre connaissance
+                    des conditions de fonctionnement,
+                    des règles et des éventuels risques
+                    avant de participer.
+                </p>
+
+                <p>
+                    La participation ne garantit aucun
+                    rendement ni remboursement.
+                </p>
+
             </div>
 
-            <div class="input-group">
-                <label for="code">Code</label>
-                <input
-                    type="text"
-                    id="code"
-                    placeholder="Mode de passe"
-                    required
-                >
-            </div>
-
-            <button type="submit" class="btn-submit" id="submit-button">
-                S'inscrire
+            <button class="read-btn" onclick="togglePresentation()" id="readButton">
+                Lire toute la présentation
+                <i class="fas fa-chevron-down"></i>
             </button>
 
-            <div id="firebase-message"></div>
+        </div>
 
-        </form>
+    </main>
+
+</section>
+
+
+<!-- PAGE INSCRIPTION -->
+
+<section id="register-page">
+
+    <button class="back-btn" onclick="goHome()">
+        <i class="fas fa-arrow-left"></i>
+        Retour à l'accueil
+    </button>
+
+    <div class="auth-container">
+
+        <div class="auth-card">
+
+            <div class="logo">
+
+                <i class="fas fa-users"></i>
+
+                <h1>TontiGo</h1>
+
+                <p>La tontine digitale réinventée</p>
+
+            </div>
+
+            <form id="register-form">
+
+                <div class="input-group">
+
+                    <label for="username">
+                        Nom d'utilisateur
+                    </label>
+
+                    <input
+                        type="text"
+                        id="username"
+                        placeholder="Nom d'utilisateur"
+                        required
+                    >
+
+                </div>
+
+                <div class="input-group">
+
+                    <label for="code">
+                        Code
+                    </label>
+
+                    <input
+                        type="text"
+                        id="code"
+                        placeholder="Entrez votre code"
+                        required
+                    >
+
+                </div>
+
+                <button type="submit" class="btn-submit" id="submit-button">
+                    S'inscrire
+                </button>
+
+                <div id="firebase-message"></div>
+
+            </form>
+
+        </div>
 
     </div>
 
-</div>
+</section>
+
 
 <script type="module">
 
-import { initializeApp } from "https://www.gstatic.com/firebasejs/13.3.0/firebase-app.js";
+import {
+    initializeApp
+} from "https://www.gstatic.com/firebasejs/13.3.0/firebase-app.js";
 
 import {
     getDatabase,
@@ -175,67 +420,160 @@ import {
 } from "https://www.gstatic.com/firebasejs/13.3.0/firebase-database.js";
 
 
+/* CONFIGURATION FIREBASE */
+
 const firebaseConfig = {
+
     apiKey: "AIzaSyCzWLEumjMugttnXm0B6RW66B0_DdgT3NM",
+
     authDomain: "tontigo-9d906.firebaseapp.com",
+
     databaseURL: "https://tontigo-9d906-default-rtdb.firebaseio.com",
+
     projectId: "tontigo-9d906",
+
     storageBucket: "tontigo-9d906.firebasestorage.app",
+
     messagingSenderId: "691420961669",
+
     appId: "1:691420961669:web:523fad7e06c4f773b582ec",
+
     measurementId: "G-8L92C0XBQ4"
+
 };
 
+
+/* INITIALISATION */
+
 const app = initializeApp(firebaseConfig);
+
 const database = getDatabase(app);
 
+
+/* NAVIGATION */
+
+window.openRegister = function(){
+
+    document.getElementById("home-page").style.display = "none";
+
+    document.getElementById("register-page").style.display = "block";
+
+    window.scrollTo(0,0);
+
+};
+
+
+window.goHome = function(){
+
+    document.getElementById("register-page").style.display = "none";
+
+    document.getElementById("home-page").style.display = "block";
+
+    window.scrollTo(0,0);
+
+};
+
+
+/* PRESENTATION */
+
+window.togglePresentation = function(){
+
+    const moreText = document.getElementById("moreText");
+
+    const button = document.getElementById("readButton");
+
+    moreText.classList.toggle("show");
+
+    if(moreText.classList.contains("show")){
+
+        button.innerHTML =
+        'Réduire la présentation <i class="fas fa-chevron-up"></i>';
+
+    }else{
+
+        button.innerHTML =
+        'Lire toute la présentation <i class="fas fa-chevron-down"></i>';
+
+    }
+
+};
+
+
+/* INSCRIPTION FIREBASE */
+
 const form = document.getElementById("register-form");
+
 const message = document.getElementById("firebase-message");
+
 const button = document.getElementById("submit-button");
 
-form.addEventListener("submit", async (event) => {
+
+form.addEventListener("submit", async (event)=>{
 
     event.preventDefault();
 
     const username = document.getElementById("username").value.trim();
+
     const code = document.getElementById("code").value.trim();
 
-    if (!username || !code) {
+    if(!username || !code){
+
         message.style.color = "#ef4444";
+
         message.textContent = "Veuillez remplir tous les champs.";
+
         return;
+
     }
 
     button.disabled = true;
+
     button.textContent = "Enregistrement...";
+
     message.textContent = "";
 
-    try {
+    try{
 
-        const userReference = push(ref(database, "users"));
+        const userReference = push(ref(database,"users"));
 
-        await set(userReference, {
+        await set(userReference,{
+
             username: username,
-            code: code,
+
+            invitationCode: code,
+
             createdAt: Date.now(),
+
             status: "active"
+
         });
 
         message.style.color = "#10b981";
-        message.textContent = "Inscription réussie ! Redirection vers le groupe TontiGo...";
 
-        setTimeout(() => {
-            window.location.href = "https://t.me/tontigo";
-        }, 1000);
+        message.textContent =
+        "Inscription réussie ! Redirection vers TontiGo...";
 
-    } catch (error) {
+        /* REDIRECTION VERS LE SITE OFFICIEL */
 
-        console.error("Erreur Firebase :", error);
+        setTimeout(()=>{
+
+            window.location.replace("https://www.tontigo.online/");
+
+        },1500);
+
+    }
+
+    catch(error){
+
+        console.error("Erreur Firebase :",error);
 
         message.style.color = "#ef4444";
-        message.textContent = "Échec de l'enregistrement : " + error.message;
+
+        message.textContent =
+        "Échec de l'enregistrement : " + error.message;
 
         button.disabled = false;
+
         button.textContent = "S'inscrire";
 
     }
